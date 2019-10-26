@@ -1,0 +1,15 @@
+{
+  "name": "powercord-server-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cadence#3263",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
+}
