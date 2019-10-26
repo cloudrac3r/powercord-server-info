@@ -1,1 +1,82 @@
-/home/cloud/Code/powercord/src/Powercord/plugins/powercord-pcss/.eslintrc.json
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "BigInt": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "root": true,
+    "rules": {
+        "array-bracket-spacing": "error",
+        "consistent-this": [
+            "error",
+            "_this"
+        ],
+        "generator-star-spacing": "error",
+        "guard-for-in": "error",
+        "handle-callback-err": "warn",
+        "indent": [
+            "error",
+            "tab",
+            {
+                "flatTernaryExpressions": true
+            }
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "lines-between-class-members": "error",
+        "no-confusing-arrow": "error",
+        "no-console": "warn",
+        "no-continue": "error",
+        "no-floating-decimal": "error",
+        "no-lonely-if": "error",
+        "no-magic-numbers": [
+            "warn",
+            {
+                "ignore": [
+                    0,
+                    1,
+                    -1
+                ]
+            }
+        ],
+        "no-mixed-operators": "error",
+        "no-multi-spaces": "error",
+        "no-return-assign": "error",
+        "no-return-await": "error",
+        "no-sequences": "error",
+        "no-throw-literal": "error",
+        "no-unused-vars": "warn",
+        "object-curly-spacing": [
+            "error",
+            "never"
+        ],
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "space-before-function-paren": [
+            "error",
+            "never"
+        ],
+        "spaced-comment": "error",
+        "yoda": "error"
+    }
+}
