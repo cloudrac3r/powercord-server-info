@@ -47,7 +47,7 @@ module.exports = class ServerInfo extends Plugin {
 
 	async startPlugin() {
 		const getGuild = (await getModule(["getGuild"])).getGuild
-		const getUser = (await getModule(["getUser"])).getUser
+		const getUser = (await getModule(["getUser", "setFlag"])).getUser
 		const getMemberIds = (await getModule(["getMemberIds"])).getMemberIds
 		const getMemberCount = (await getModule(["getMemberCount"])).getMemberCount
 		const getChannel = (await getModule(["getChannel"])).getChannel

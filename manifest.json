@@ -1,6 +1,6 @@
 {
 	"name": "Server Info",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Adds the serverinfo command.",
 	"author": "Cadence#3263",
 	"license": "MIT"
