@@ -60,7 +60,7 @@ module.exports = class ServerInfo extends Plugin {
 			"Get information about the current server.",
 			"{c}",
 			// code
-			() => {
+			async () => {
 				const channelID = getChannelId()
 				const channel = getChannel(channelID)
 				if (channel.guild_id) {
@@ -80,7 +80,7 @@ module.exports = class ServerInfo extends Plugin {
 						}
 					}
 
-					let owner = getUser(guild.ownerId)
+					let owner = await getUser(guild.ownerId)
 					let ownerString = ""
 					if (owner) {
 						ownerString = `**${owner.tag}** (<@${owner.id}>)`
@@ -107,13 +107,17 @@ module.exports = class ServerInfo extends Plugin {
 						iconString = `\n\nIcon URL: ${getIconURL(guild.id, guild.icon, "png", PREFERRED_ICON_SIZE)}`
 					}
 
-					const friendUsernames = []
+					let friendUsernames = []
 					getMemberIds(guild.id).forEach(id => {
 						if (isFriend(id)) {
-							const user = getUser(id)
-							friendUsernames.push(user.username)
+							friendUsernames.push(
+								getUser(id).then(user =>
+									user.username
+								)
+							)
 						}
 					})
+					friendUsernames = await Promise.all(friendUsernames)
 					if (friendUsernames.length > 0) {
 						friendUsernames.sort((a, b) => {
 							a = a.toLowerCase()
