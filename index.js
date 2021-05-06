@@ -12,7 +12,7 @@ module.exports = class ServerInfo extends Plugin {
 	  powercord.api.commands.registerCommand({
 		command: "serverinfo",
 		aliases: ["guildinfo"],
-		description: "Get information about the current servers.",
+		description: "Get information about the current server.",
 		usage: "{c}",
 		executor: () => {
 		  return this.executeCommand()
